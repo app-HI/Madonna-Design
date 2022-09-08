@@ -21,46 +21,78 @@ body {
 /* .wrapper */
 /* header */
 header {
-  height: 60px;
-  background-color: var(--background-color-primary);
-  color: var(--text-color-normal);
+  background-color: white;
+  display: flex;
+  padding: 5px;
+  padding-left: 25px;
+  border-bottom: 0.2px solid rgb(0, 0, 0, 0.1);
+  height: 60px !important;
+  position: fixed;
+  width: 100%;
+}
+.header-left {
+  width: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 15px;
-  position: fixed;
-  z-index: 1000;
+  justify-content: flex-start;
 }
-header div {
-  font-weight: 900;
-  font-size: 20px;
-  letter-spacing: 4px;
+@media screen and (max-width: 768px) {
+  .header-left {
+    display: none;
+    width: 0;
+  }
+  .header-right {
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+  }
+  .header-right-link {
+    margin: 0 !important;
+  }
 }
-header div:hover {
-  color: var(--text-color-hover);
-  transition: all 0.6s ease;
+.header-left p {
+  margin: 0 16px;
+}
+.header-diffrent {
+  background-color: white;
+  width: 85px;
+  padding-bottom: 2px;
+}
+.header-same {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 0;
+}
+.header-same:hover {
+  border-bottom: 2.5px solid black;
   cursor: pointer;
 }
-header nav {
-  margin-right: 3rem;
-}
-header nav ul {
+
+.header-right {
+  width: 50%;
   display: flex;
-  gap: 15px;
+  align-items: center;
+  justify-content: flex-end;
 }
-header nav ul li {
-  list-style: none;
+.header-right .PrimaryNav-icon-r_P {
+  width: 65px;
+  max-height: fit-content;
+  object-fit: contain;
+  margin: 0 35px;
 }
-header nav ul li a {
+.header-right-link {
+  padding: 6px 18px;
+  background-color: #0057ff;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  margin: 0 5px;
+  border: none;
   text-decoration: none;
-  color: var(--text-color-normal);
 }
-header nav ul li a:hover {
-  transition: all 0.6s ease;
-  color: var(--color-anchortag);
-  font-weight: 900;
-}
+
+/* end of header */
+
 /* end of header  */
 /* section */
 section {
@@ -74,10 +106,12 @@ section {
   justify-content: center;
   width: 100%;
   margin: 0px;
+  padding-top: 50px;
 }
 .section1 .div1 {
   width: 50%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .section1 .div1 img {
   width: 100%;
@@ -86,11 +120,11 @@ section {
 }
 .section1 .div1 img:hover {
   transition: all 0.75s;
-  transform: scale(0.96);
 }
 .section1 .div2 {
   width: 50%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
   background-color: rgb(0, 0, 0);
 }
 .div2 .div2_inside {
@@ -117,7 +151,6 @@ section {
     rgba(0, 212, 255, 1) 97%
   );
   border-radius: 30px;
-  transform: scale(1.1);
   color: #ffffff;
 }
 .div2 .div2_inside p {
