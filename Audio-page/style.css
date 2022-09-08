@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap");
+:root {
+  --background-color-primary: #fafefd99;
+  --background-color-secondary: #8de4ff;
+  --background-color-blue: #8ac4ff;
+  --background-color-extra: #000000;
+  --text-color-hover: #ffffff;
+  --text-color-normal: #000000;
+  --color-anchortag: #d72dd2;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color-extra);
+  background: url('../Main-page/images/110820221660234770.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* .wrapper */
+/* header */
+header {
+  height: 60px;
+  background-color: var(--background-color-primary);
+  color: var(--text-color-normal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+  position: fixed;
+  z-index: 1000;
+}
+header div {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+header div:hover {
+  color: var(--text-color-hover);
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+header nav {
+  margin-right: 3rem;
+}
+header nav ul {
+  display: flex;
+  gap: 15px;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color-normal);
+}
+header nav ul li a:hover {
+  transition: all 0.6s ease;
+  color: var(--color-anchortag);
+  font-weight: 900;
+}
+/* end of header  */
+.audio{
+  margin: 0 200px;
+  height: 80vh;
+  background-color:#00000070;
+  color: white;
+}
