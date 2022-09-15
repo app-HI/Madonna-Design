@@ -5,6 +5,7 @@
   --color-small: #c2cae8;
   --color-section: #8380b6;
   --color-div: #111d4a;
+  --font-size:16px;
 }
 *,
 body {
@@ -212,14 +213,21 @@ body {
   border-radius: 50%;
   filter: blur(1.09px);
   transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
 }
 
-.item p {
+.item a {
   color: white;
   transition: all 0.4s ease-in-out;
   font-weight: bold;
+  text-decoration: none;
+  transform: translateY(60%);
+  transition: all .6s ease-in-out;
 }
-.item p:hover {
+.item:hover a{
+  transform: translateY(10%);
+}
+.item a:hover {
   color: rgb(239, 13, 47);
   transform: scale(1.1);
   font-weight: 900;
